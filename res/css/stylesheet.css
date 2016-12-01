@@ -1,0 +1,296 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand');
+
+/** componentes comuns **/
+
+html {
+    height: 100%;
+}
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 2em;
+    height: 100%;
+}
+
+.header {
+    padding-top: 6em;    
+}
+.row-header{    
+}
+.text-header {
+    width: 100%;
+    font-size: 60px;
+    float: left;
+    color: white;
+}
+
+.sub-text-header {
+    font-size: 25px;
+    padding-top: 1em;
+    float: left;
+    color: white;
+}
+
+.bg-1 {
+    padding-top: 70px;
+    height: 100%;
+    width: 100%;
+    background-image: url(../img/bg-1.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bg-2 {
+    background-color: #73AF59;
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+.bg-3 {
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+.bg-4 {
+    background-color: #73AF59;
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+.bg-5 {
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+.button-header-container {
+    margin-top: 1em;
+}
+
+@media (max-width: 992px) {
+    .text-header {
+        font-size: 2.1em;
+    }
+    .btn-header {
+        padding-top: 5em;
+    }
+}
+
+.color-primary {
+    color: white !important;
+}
+
+.color-secondary {
+    color: #73AF59;
+}
+
+.button {
+    background-color: Transparent;
+    background-repeat: no-repeat;
+    color: white;
+    border: solid 2px;
+    cursor: pointer;
+    overflow: hidden;
+    outline: none;
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+}
+
+.button:hover {
+    color: #73AF59;
+    text-decoration: none;
+}
+
+.button-header {
+    margin-top: 1em;
+}
+
+.separator {
+    width: 90%;
+    color: #73AF59;
+    border: none;
+    height: 1px;
+    /* Set the hr color */
+    color: #333;
+    /* old IE */
+    background-color: transparent;
+    /* Modern Browsers */
+}
+
+.logo {
+    font-size: 5em;
+    color: #73AF59;
+}
+
+.logo-small {
+    color: #73AF59;
+    font-size: 50px;
+}
+
+
+/** componentes comuns **/
+
+
+/**about**/
+
+.text-header-about {
+    color: white;
+}
+
+.about-header {
+    padding-top: 0.5em;
+}
+
+.about-list {
+    padding-top: 3em;
+}
+
+.about-logo {
+    padding-top: 0.8em;
+    padding-right: 2em;
+}
+
+
+/**about**/
+
+
+/**Knowledge**/
+
+progress {
+    width: 50%;
+    height: 14px;
+    margin: 50px auto;
+    margin-bottom: 0px;
+    margin-top: 20px;
+    display: block;
+    /* Important Thing */
+    -webkit-appearance: none;
+    border: none;
+    border-radius: 0px;
+    background: white;
+}
+
+
+/* All good till now. Now we'll style the background */
+
+progress::-webkit-progress-bar {
+    background: #d0d0d0;
+    border-radius: 0px;
+    border: 0.5px solid #d0d0d0;
+}
+
+
+/* Now the value part */
+
+progress::-webkit-progress-value {
+    border-radius: 0px;
+    background: #73AF59;
+    /* Looks great, now animating it */
+    background-size: 25px 14px, 100% 100%, 100% 100%;
+    -webkit-animation: move 5s linear 0 infinite;
+}
+
+
+/* That's it! Now let's try creating a new stripe pattern and animate it using animation and keyframes properties  */
+
+@-webkit-keyframes move {
+    0% {
+        background-position: 0px 0px, 0 0, 0 0
+    }
+    100% {
+        background-position: -100px 0px, 0 0, 0 0
+    }
+}
+
+
+/* Prefix-free was creating issues with the animation */
+
+.percent-text-knowledge {
+    color: #73AF59;
+}
+
+
+/** Knowledge **/
+
+/** Education **/
+.img-education{
+    width: 5em;
+}
+.text-education{
+    padding-top: 2em;
+}
+/** navbar transform**/
+
+.scrolled {
+    transition: 0.5s ease;
+}
+
+.scrolled.navbar {
+    background-color: black;
+    padding: 0.5em;
+    transition: 0.5s ease;
+}
+
+.scrolled.navbar .nav .item {
+    line-height: 40px;
+    transition: 0.5s ease;
+}
+
+.scrolled.navbar .nav .item .contact {
+    display: inline-block;
+    background-color: #ffffff;
+    height: 40px;
+    line-height: 30px;
+    padding: 5px;
+    border-radius: 2px;
+    transition: 0.5s ease;
+}
+
+.scrolled.navbar .logo {
+    float: left;
+    display: inline-block;
+    margin-top: 5px;
+    margin-left: 5%;
+    width: 40px;
+    height: 40px;
+    background-color: firebrick;
+    transition: 0.5s ease;
+}
+
+
+/** navbar transform**/
+
+
+/** Bootstrap Configs **/
+
+.navbar-default .navbar-nav>li>a {
+    color: white;
+}
+
+.navbar {
+    background-color: white;
+    background: transparent;
+    border-color: transparent;
+    padding-top: 2em;
+    padding-right: 2em;
+    color: white;
+    transition: 0.5s ease;
+}
+
+.navbar li {
+    color: white;
+}
+
+.navbar-default .navbar-nav>li>a:hover {
+    color: gainsboro;
+}
+
+.row {
+    padding: 1em;
+}
+
+
+/** Bootstrap Configs **/
