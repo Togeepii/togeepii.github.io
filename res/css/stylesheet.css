@@ -13,10 +13,11 @@ body {
 }
 
 .header {
-    padding-top: 6em;    
+    padding-top: 6em;
 }
-.row-header{    
-}
+
+.row-header {}
+
 .text-header {
     width: 100%;
     font-size: 60px;
@@ -77,6 +78,10 @@ body {
     }
 }
 
+.color-text {
+    color: black;
+}
+
 .color-primary {
     color: white !important;
 }
@@ -99,7 +104,27 @@ body {
     padding-bottom: 0.5em;
 }
 
-.button:hover {
+.button-secondary {
+    background-color: Transparent;
+    background-repeat: no-repeat;
+    color: #73AF59;
+    border: solid 2px;
+    cursor: pointer;
+    overflow: hidden;
+    outline: none;
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+}
+
+.button-secondary:hover {
+    color: black;
+    text-decoration: none;
+}
+
+.button:hover,
+.button:focus {
     color: #73AF59;
     text-decoration: none;
 }
@@ -215,13 +240,28 @@ progress::-webkit-progress-value {
 
 /** Knowledge **/
 
+
 /** Education **/
-.img-education{
+
+.img-education {
     width: 5em;
 }
-.text-education{
+
+.text-education {
     padding-top: 2em;
 }
+
+
+/** Education **/
+
+
+/** Contact **/
+
+.textarea-contact {
+    resize: none;
+}
+
+
 /** navbar transform**/
 
 .scrolled {
@@ -290,6 +330,15 @@ progress::-webkit-progress-value {
 
 .row {
     padding: 1em;
+}
+
+* {
+    border-radius: 0 !important;
+}
+
+.form-control:focus {
+    border-color: #73AF59;
+    box-shadow: none;
 }
 
 
