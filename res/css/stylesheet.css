@@ -264,40 +264,47 @@ progress::-webkit-progress-value {
 
 /** navbar transform**/
 
-.scrolled {
-    transition: 0.5s ease;
+@media(min-width:992px) {
+    .scrolled {
+        transition: 0.5s ease;
+    }
+    .scrolled.navbar {
+        background-color: black;
+        padding: 0.5em;
+        transition: 0.5s ease;
+    }
+    .scrolled.navbar .nav .item {
+        line-height: 40px;
+        transition: 0.5s ease;
+    }
+    .scrolled.navbar .nav .item .contact {
+        display: inline-block;
+        background-color: #ffffff;
+        height: 40px;
+        line-height: 30px;
+        padding: 5px;
+        border-radius: 2px;
+        transition: 0.5s ease;
+    }
+    .scrolled.navbar .logo {
+        float: left;
+        display: inline-block;
+        margin-top: 5px;
+        margin-left: 5%;
+        width: 40px;
+        height: 40px;
+        background-color: firebrick;
+        transition: 0.5s ease;
+    }
+    
 }
 
-.scrolled.navbar {
-    background-color: black;
-    padding: 0.5em;
-    transition: 0.5s ease;
-}
-
-.scrolled.navbar .nav .item {
-    line-height: 40px;
-    transition: 0.5s ease;
-}
-
-.scrolled.navbar .nav .item .contact {
-    display: inline-block;
-    background-color: #ffffff;
-    height: 40px;
-    line-height: 30px;
-    padding: 5px;
-    border-radius: 2px;
-    transition: 0.5s ease;
-}
-
-.scrolled.navbar .logo {
-    float: left;
-    display: inline-block;
-    margin-top: 5px;
-    margin-left: 5%;
-    width: 40px;
-    height: 40px;
-    background-color: firebrick;
-    transition: 0.5s ease;
+@media(max-width:992px) {
+    nav.navbar {        
+        background-color: black !important;
+        background: solid !important;
+        padding: 0px;
+    }
 }
 
 
