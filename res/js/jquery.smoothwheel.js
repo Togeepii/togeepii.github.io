@@ -6,7 +6,7 @@
  * Time: 11:04 AM
  *
  */
-(function ($) {
+ (function ($) {
 
     var self = this, container, running=false, currentY = 0, targetY = 0, oldY = 0, maxScrollTop= 0, minScrollTop, direction, onRenderCallback=null,
             fricton = 0.95, // higher value for slower deceleration
@@ -15,29 +15,29 @@
             minMovement= 0.1,
             ts=0.1;
 
-    var updateScrollTarget = function (amt) {
-        targetY += amt;
-        vy += (targetY - oldY) * stepAmt;
-      
-        oldY = targetY;
+            var updateScrollTarget = function (amt) {
+                targetY += amt;
+                vy += (targetY - oldY) * stepAmt;
+                
+                oldY = targetY;
 
 
-    }
-    var render = function () {
-        if (vy < -(minMovement) || vy > minMovement) {
+            }
+            var render = function () {
+                if (vy < -(minMovement) || vy > minMovement) {
 
-            currentY = (currentY + vy);
-            if (currentY > maxScrollTop) {
-                currentY = vy = 0;
-            } else if (currentY < minScrollTop) {
-                    vy = 0;
-                    currentY = minScrollTop;
-                }
-           
-            container.scrollTop(-currentY);
+                    currentY = (currentY + vy);
+                    if (currentY > maxScrollTop) {
+                        currentY = vy = 0;
+                    } else if (currentY < minScrollTop) {
+                        vy = 0;
+                        currentY = minScrollTop;
+                    }
+                    
+                    container.scrollTop(-currentY);
 
-            vy *= fricton;
-            
+                    vy *= fricton;
+                    
          //   vy += ts * (currentY-targetY);
             // scrollTopTweened += settings.tweenSpeed * (scrollTop - scrollTopTweened);
             // currentY += ts * (targetY - currentY);
@@ -56,7 +56,7 @@
     var onWheel = function (e) {
         e.preventDefault();
         var evt = e.originalEvent;
-       
+        
         var delta = evt.detail ? evt.detail * -1 : evt.wheelDelta / 40;
         var dir = delta < 0 ? -1 : 1;
         if (dir != direction) {
@@ -73,23 +73,23 @@
     /*
      * http://paulirish.com/2011/requestanimationframe-for-smart-animating/
      */
-    window.requestAnimFrame = (function () {
+     window.requestAnimFrame = (function () {
         return  window.requestAnimationFrame ||
-                window.webkitRequestAnimationFrame ||
-                window.mozRequestAnimationFrame ||
-                window.oRequestAnimationFrame ||
-                window.msRequestAnimationFrame ||
-                function (callback) {
-                    window.setTimeout(callback, 1000 / 60);
-                }; 
-              
-                
+        window.webkitRequestAnimationFrame ||
+        window.mozRequestAnimationFrame ||
+        window.oRequestAnimationFrame ||
+        window.msRequestAnimationFrame ||
+        function (callback) {
+            window.setTimeout(callback, 1000 / 60);
+        }; 
+        
+        
     })();
 
     /*
      * http://jsbin.com/iqafek/2/edit
      */
-    var normalizeWheelDelta = function () {
+     var normalizeWheelDelta = function () {
         // Keep a distribution of observed values, and scale by the
         // 33rd percentile.
         var distribution = [], done = null, scale = 30;
