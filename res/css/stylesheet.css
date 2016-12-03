@@ -178,12 +178,8 @@ body {
     color: white;
 }
 
-.about-header {
-    padding-top: 0.5em;
-}
-
 .about-list {
-    padding-top: 3em;
+    padding-top: 2em;
 }
 
 .about-logo {
@@ -196,55 +192,6 @@ body {
 
 
 /**Knowledge**/
-
-progress {
-    width: 50%;
-    height: 14px;
-    margin: 50px auto;
-    margin-bottom: 0px;
-    margin-top: 20px;
-    display: block;
-    /* Important Thing */
-    -webkit-appearance: none;
-    border: none;
-    border-radius: 0px;
-    background: white;
-}
-
-
-/* All good till now. Now we'll style the background */
-
-progress::-webkit-progress-bar {
-    background: #d0d0d0;
-    border-radius: 0px;
-    border: 0.5px solid #d0d0d0;
-}
-
-
-/* Now the value part */
-
-progress::-webkit-progress-value {
-    border-radius: 0px;
-    background: #73AF59;
-    /* Looks great, now animating it */
-    background-size: 25px 14px, 100% 100%, 100% 100%;
-    -webkit-animation: move 5s linear 0 infinite;
-}
-
-
-/* That's it! Now let's try creating a new stripe pattern and animate it using animation and keyframes properties  */
-
-@-webkit-keyframes move {
-    0% {
-        background-position: 0px 0px, 0 0, 0 0
-    }
-    100% {
-        background-position: -100px 0px, 0 0, 0 0
-    }
-}
-
-
-/* Prefix-free was creating issues with the animation */
 
 .percent-text-knowledge {
     color: #73AF59;
@@ -345,6 +292,10 @@ progress::-webkit-progress-value {
 
 .navbar-default .navbar-nav>li>a:hover {
     color: gainsboro;
+}
+
+.navbar-default .navbar-nav>li>a:focus {
+    color: white;
 }
 
 .row {
